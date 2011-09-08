@@ -1,2 +1,66 @@
-%h1 Pages#index
-%p Find me in app/views/pages/index.html.haml
+%h2= "Tabs and pills"
+%ul.tabs
+  %li.active= link_to "Home", "#"
+  %li= link_to "Profile", "#"
+  %li= link_to "Messages", "#"
+  %li= link_to "Settings", "#"
+  %li= link_to "Contact", "#"
+
+%ul.pills
+  %li.active= link_to "Home", "#"
+  %li= link_to "Profile", "#"
+  %li= link_to "Messages", "#"
+  %li= link_to "Settings", "#"
+  %li= link_to "Contact", "#"
+
+%h2= "Pagination"
+
+.pagination
+  %ul
+    %li.prev_disabled= link_to "Previous", "#"
+    %li.active= link_to 1, "#"
+    %li= link_to 2, "#"
+    %li= link_to 3, "#"
+    %li= link_to 4, "#"
+    %li= link_to 5, "#"
+    %li.next= link_to raw("Next &rarr;"), "#"
+
+%h2= "Alerts & Errors"
+
+.span12_columns
+  .alert-message
+    = link_to "×", "#", :class => "close"
+    %p
+      %strong= "Holy guacamole!"
+      = "Best check yo self, you’re not looking too good."
+  = content_tag(:div, :class => "alert-message error" ) do
+    = link_to "×", "#", :class => "close"
+    %p
+      %strong= "Oh snap!"
+      = "Change this and that and try again."
+  = content_tag(:div, :class => "alert-message success" ) do
+    = link_to "×", "#", :class => "close"
+    %p
+      %strong= "Well done!"
+      = "You successfully read this alert message."
+  = content_tag(:div, :class => "alert-message info" ) do
+    = link_to "×", "#", :class => "close"
+    %p
+      %strong= "Heads up!"
+
+
+%table.zebra-striped
+  %thead
+    %tr
+      %th= "#"
+      %th= "FirstName"
+      %th= "LastName"
+      %th= "Language"
+  %tbody
+    - 5.times do |i|
+      %tr
+        %td= i
+        %td= "hiroshi"
+        %td= "asakura"
+        %td= "japanese"
+
