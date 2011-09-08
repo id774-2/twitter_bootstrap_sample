@@ -8,9 +8,34 @@
     = csrf_meta_tags
   %body
     .topbar
-      .fill
-        .container
-          %h3
-            %a(href='/')
-              PragmaticMochiz
-          = yield
+      .topbar-wrapper
+        .topbar-inner
+          .container
+            %h3
+              %a= link_to "Mochiz TwitterBootstrap Sample", root_path
+            %ul.nav
+              %li= "hoge"
+              %li= "rere"
+              %li= "mimi"
+              %li= "fafa"
+              %li= "soso"
+              %li= "soso"
+              %li= "soso"
+
+    .container-fluid
+      .sidebar
+        = "here is sidebar"
+      .content
+        = "here is content"
+
+    .container(style='margin-top: 40px; padding-top: 10px')
+      - flash.each do |name, msg|
+        .alert-message.small(class='#{name}')= msg
+
+    .container
+      .pageContent
+        = yield
+
+    .container.footer
+      Powered by <a href='http://heroku.com'>Heroku</a>, <a href='http://rubyonrails.org/'>Rails3.1</a>, <a href='http://twitter.github.com/bootstrap/'>Twitter Bootstrap</a>
+      Create by <a href='http://twitter.com/func09'>@func09</a>. <a href='http://github.com/func09/5thanks'>Github</a>
