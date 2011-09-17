@@ -7,35 +7,31 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
-    #fork_me
-      = link_to "", "https://github.com/mochiz/twitter_bootstrap_sample"
-
     .topbar
-      .topbar-wrapper
-        .topbar-inner
-          .container
-            %h3
-              %a= link_to "Mochiz TwitterBootstrap Sample", root_path
-            %ul.nav
-              %li= "hoge"
-              %li= "rere"
-              %li= "mimi"
-              %li= "fafa"
-              %li= "soso"
-              %li= "soso"
-              %li= "soso"
+      .topbar-inner
+        .container
+          %h3
+            %a= link_to "Mochiz TwitterBootstrap Sample", root_path
+          %ul.nav
+            %li= link_to "Overview", "#masthead"
+            %li= link_to "About", "#about"
+            %li= link_to "Grid", "#grid-system"
+            %li= link_to "Layouts", "#layouts"
+            %li= link_to "Typography", "#typography"
+            %li= link_to "Tables", "#tables"
+            %li= link_to "Forms", "#forms"
+            %li= link_to "Navigation", "#navigation"
+            %li= link_to "Alerts", "#alerts"
+            %li= link_to "Popovers", "#popovers"
+            %li= link_to "Less", "#less"
 
-    .container-fluid
-      .sidebar
-        = "here is sidebar"
-      .content
-        = "here is content"
-
-    .container(style='margin-top: 40px; padding-top: 10px')
+    .container(style='margin-top: 80px; padding-top: 10px')
       - flash.each do |name, msg|
         .alert-message.small(class='#{name}')= msg
 
     .container
+      #fork_me
+        = link_to "", "https://github.com/mochiz/twitter_bootstrap_sample"
       .pageContent
         = yield
 
