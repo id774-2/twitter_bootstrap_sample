@@ -15,12 +15,7 @@ group :assets do
   gem 'uglifier'
 end
 
-gem 'devise'
-gem 'haml-rails'
-gem 'kaminari'
 gem 'jquery-rails'
-gem 'i18n_generators'
-gem 'nifty-generators'
 
 # Use unicorn as the web server
 # gem 'unicorn'
