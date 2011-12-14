@@ -1,30 +1,26 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.1.0'
+gem 'rails', '>= 3.1.0'
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
-
-gem 'sqlite3', :group => :development
-
-# for heroku
-group :production do
-  gem 'pg'
-  gem 'therubyracer-heroku'
-end
-
-gem 'haml-rails'
+gem 'sqlite3'
 
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails', "  ~> 3.1.0"
-  gem 'coffee-rails', "~> 3.1.0"
+  gem 'sass-rails', ">= 3.1.0"
+  gem 'coffee-rails', ">= 3.1.0"
   gem 'uglifier'
 end
 
+gem 'devise'
+gem 'haml-rails'
+gem 'kaminari'
 gem 'jquery-rails'
+gem 'i18n_generators'
+gem 'nifty-generators'
 
 # Use unicorn as the web server
 # gem 'unicorn'
@@ -38,8 +34,4 @@ gem 'jquery-rails'
 group :test do
   # Pretty printed test output
   gem 'turn', :require => false
-end
-
-group :development do
-  gem 'erb2haml'
 end
